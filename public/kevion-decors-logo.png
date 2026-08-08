@@ -1,0 +1,199 @@
+Create a modern, premium website for an interior design and home decor brand named **Kevion Decors**.
+
+---
+
+## 🎯 Main Goal
+
+This website is a **premium digital showroom**:
+
+* Showcase interior designs and decor items
+* No checkout or payment system
+* Customers will **contact via Instagram or WhatsApp (DM-based ordering)**
+
+---
+
+## 🎨 Brand Style & Theme
+
+* Primary: Light Mint Green
+* Secondary: Warm Gold
+* Accent: Deep Emerald Green
+* Background: Cream / Ivory
+* Style: Minimal, elegant, airy, luxury
+* Avoid heavy/dark black tones
+
+---
+
+## 🏠 Website Structure
+
+### 1. Hero Section (Top Fold)
+
+* Full-width **autoplay background video**
+* Video should show luxury interiors & decor
+* Must be: muted, loop, smooth
+
+**Overlay Text:**
+“Designing Spaces, Defining Lifestyles”
+
+**Buttons:**
+
+* View Collection
+* DM on Instagram
+
+---
+
+### 2. Product / Design Showcase (MAIN SECTION)
+
+Display all items in a **premium grid layout with dummy images (Unsplash/Pexels)**.
+
+### Categories:
+
+* Living Room Designs
+* Bedroom Designs
+* Kitchen Designs
+* Decor Items
+* **Cotton Decor Collection (Premium Decorative Focus)**
+
+---
+
+### Cotton Decor Collection (IMPORTANT 🔥)
+
+This is NOT basic items. Focus on **aesthetic decorative cotton pieces**:
+
+Include:
+
+* Textured Cotton Wall Panels
+* Designer Fabric Wall Art
+* Cotton Decorative Drapes (layered & stylish)
+* Upholstered Accent Decor Pieces
+* Handmade Cotton Installations
+* Fabric-Based Interior Decor Structures
+* Artistic Cotton Backdrops
+
+Each item should feel:
+
+* Premium
+* Stylish
+* Modern
+* Highly decorative (not utility-focused)
+
+---
+
+### Item Card Design (for all categories)
+
+Each item must include:
+
+* Image (dummy for now)
+* Title
+* Short premium description
+* Optional price (₹ or “Starting from…”)
+* Button: **Enquire Now**
+
+👉 On click:
+
+* Open WhatsApp OR Instagram DM
+* Pre-filled message:
+  “Hi, I’m interested in this design from Kevion Decors”
+
+---
+
+### 3. Video Showcase Section
+
+* Add a **playable video section**
+* Auto-preview + click to play
+* Show luxury interiors
+
+**Title:**
+“Experience Our Designs”
+
+---
+
+### 4. About Section
+
+* Short premium brand introduction
+* Focus on elegance, creativity, and attention to detail
+
+---
+
+### 5. Why Choose Us
+
+* Premium Quality
+* Modern Elegant Designs
+* Attention to Detail
+* Affordable Luxury
+
+---
+
+### 6. Instagram Section (VERY IMPORTANT)
+
+* Show **dummy Instagram feed preview (grid)**
+* Button: “Follow on Instagram”
+* This acts as a key conversion channel
+
+---
+
+### 7. Call to Action Section
+
+Text:
+“Like something? Let’s design it for you.”
+
+Buttons:
+
+* DM on Instagram
+* Chat on WhatsApp
+
+---
+
+### 8. Contact Section
+
+* Minimal form (optional)
+* Focus on:
+
+  * WhatsApp click-to-chat
+  * Instagram profile link
+
+---
+
+### 9. Footer
+
+* Logo
+* Navigation links
+* Social icons
+* Tagline:
+  “Designing Spaces, Defining Lifestyles”
+
+---
+
+## ⚙️ Functional Requirements
+
+* Hero video must autoplay, muted, loop
+* Add **dummy high-quality images everywhere initially**
+* Add **playable video section**
+* Add **floating WhatsApp button (bottom right)**
+* Add Instagram link/button in header + sections
+
+### WhatsApp Integration:
+
+Use:
+https://wa.me/<your-number>?text=Hi%20I’m%20interested%20in%20Kevion%20Decors
+
+---
+
+## ✨ UI/UX Requirements
+
+* Clean, spacious layout (not cluttered)
+* Smooth scroll animations
+* Elegant fonts (serif or modern sans-serif)
+* Soft shadows and hover effects
+* Premium luxury feel (like high-end interior brands)
+
+---
+
+## 📌 Final Outcome
+
+A **luxury, elegant, modern website** that:
+
+* Feels like a high-end showroom
+* Showcases designs beautifully
+* Encourages users to **DM via Instagram/WhatsApp to order**
+
+No cart, no payments — only **direct interaction sales model**.
