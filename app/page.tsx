@@ -4,8 +4,8 @@ import { ArrowUpRight, Camera, HandHeart, Leaf, Menu, MessageCircle, Sparkles } 
 import Image from 'next/image'
 import { useState } from 'react'
 
-const whatsappUrl = 'https://wa.me/919999999999?text=Hi%2C%20I%27m%20interested%20in%20Kevion%20Decors'
-const instagramUrl = 'https://instagram.com/keviondecors'
+const whatsappUrl = 'https://wa.me/919301498676?text=Hi%2C%20I%27m%20interested%20in%20Kevion%20Decors'
+const instagramUrl = 'https://www.instagram.com/kevion_decors?igsh=cGp5d3NuejAwc2li'
 
 const collections = [
   { title: 'Woolen items', category: '01 — soft textures', description: 'Warm, tactile pieces for slow living.', image: '/images/woolen-decor.png' },
