@@ -36,11 +36,9 @@ export function IntroVideo() {
       </div>
 
       <div className="intro-video-stage" aria-live="polite">
-        {frames.map((item, index) => (
-          <div className={`intro-video-frame ${index === activeFrame ? 'active' : ''}`} key={item.image} aria-hidden={index !== activeFrame}>
-            <Image src={item.image} alt="" fill sizes="(max-width: 700px) 100vw, 1180px" priority={index === 0} />
-          </div>
-        ))}
+        <div className="intro-video-frame active">
+          <Image src={frame.image} alt="" fill sizes="(max-width: 700px) 100vw, 1180px" loading="lazy" quality={72} />
+        </div>
         <div className="intro-video-overlay" />
         <div className="intro-video-copy">
           <span>{frame.label}</span>
