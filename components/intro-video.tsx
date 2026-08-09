@@ -82,6 +82,9 @@ export function IntroVideo() {
           <Image src={frame.image} alt="" fill sizes="(max-width: 700px) 100vw, 1180px" loading="lazy" quality={72} />
         </div>
         <div className="intro-video-overlay" />
+        <div className="intro-video-brand" aria-label="Kevion Decors">
+          <Image src="/kevion-decors-logo.png" alt="Kevion Decors" width={150} height={64} />
+        </div>
         <div className="intro-video-copy">
           <span>{frame.label}</span>
           <h3>{frame.title}</h3>
