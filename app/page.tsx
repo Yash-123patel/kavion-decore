@@ -3,6 +3,7 @@
 import { ArrowUpRight, Camera, HandHeart, Leaf, Menu, MessageCircle, Sparkles } from 'lucide-react'
 import Image from 'next/image'
 import { useState } from 'react'
+import { IntroVideo } from '@/components/intro-video'
 
 const whatsappUrl = 'https://wa.me/919301498676?text=Hi%2C%20I%27m%20interested%20in%20Kevion%20Decors'
 const instagramUrl = 'https://www.instagram.com/kevion_decors?igsh=cGp5d3NuejAwc2li'
@@ -38,6 +39,8 @@ export default function Page() {
         </div>
         <div className="hero-note">Designing spaces,<br />defining lifestyles.</div>
       </section>
+
+      <IntroVideo />
 
       <section className="intro shell" id="story"><p className="eyebrow">The Kevion point of view</p><div className="intro-grid"><h2>We believe a home should be <em>felt</em> before it is seen.</h2><div><p>From calm, considered rooms to the objects that make them yours, we create interiors with a quiet confidence and a love for the details.</p><a className="text-link" href={whatsappUrl} target="_blank" rel="noreferrer">Tell us about your space <ArrowUpRight size={16} /></a></div></div></section>
 
