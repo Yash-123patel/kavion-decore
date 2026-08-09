@@ -2,7 +2,7 @@
 
 import Image from 'next/image'
 import { Pause, Play, Volume2, VolumeX } from 'lucide-react'
-import { useEffect, useState } from 'react'
+import { useEffect, useRef, useState } from 'react'
 
 const frames = [
   { image: '/images/woolen-decor.png', label: 'Soft textures', title: 'A softer way to live.' },
@@ -14,6 +14,48 @@ export function IntroVideo() {
   const [activeFrame, setActiveFrame] = useState(0)
   const [isPlaying, setIsPlaying] = useState(true)
   const [isMuted, setIsMuted] = useState(true)
+  const audioContextRef = useRef<AudioContext | null>(null)
+  const audioTimerRef = useRef<number | null>(null)
+
+  useEffect(() => {
+    return () => {
+      if (audioTimerRef.current) window.clearTimeout(audioTimerRef.current)
+      audioContextRef.current?.close()
+    }
+  }, [])
+
+  const toggleSound = () => {
+    if (!audioContextRef.current) {
+      const AudioContextClass = window.AudioContext || (window as typeof window & { webkitAudioContext?: typeof AudioContext }).webkitAudioContext
+      if (!AudioContextClass) return
+      audioContextRef.current = new AudioContextClass()
+    }
+
+    const context = audioContextRef.current
+    if (isMuted) {
+      void context.resume()
+      const playPhrase = () => {
+        const notes = [220, 277.18, 329.63, 440]
+        notes.forEach((frequency, index) => {
+          const oscillator = context.createOscillator()
+          const gain = context.createGain()
+          oscillator.type = 'sine'
+          oscillator.frequency.value = frequency
+          gain.gain.setValueAtTime(0, context.currentTime)
+          gain.gain.linearRampToValueAtTime(0.025, context.currentTime + 0.8)
+          gain.gain.linearRampToValueAtTime(0, context.currentTime + 3.8)
+          oscillator.connect(gain).connect(context.destination)
+          oscillator.start(context.currentTime + index * 0.35)
+          oscillator.stop(context.currentTime + 4.2)
+        })
+      }
+      playPhrase()
+      audioTimerRef.current = window.setInterval(playPhrase, 5200)
+    } else {
+      void context.suspend()
+    }
+    setIsMuted((value) => !value)
+  }
 
   useEffect(() => {
     if (!isPlaying) return
@@ -48,7 +90,7 @@ export function IntroVideo() {
           <button type="button" onClick={() => setIsPlaying((value) => !value)} aria-label={isPlaying ? 'Pause introduction' : 'Play introduction'}>
             {isPlaying ? <Pause /> : <Play />}
           </button>
-          <button type="button" onClick={() => setIsMuted((value) => !value)} aria-label={isMuted ? 'Unmute introduction' : 'Mute introduction'}>
+          <button type="button" onClick={toggleSound} aria-label={isMuted ? 'Play instrumental sound' : 'Mute instrumental sound'}>
             {isMuted ? <VolumeX /> : <Volume2 />}
           </button>
           <div className="intro-video-progress" aria-label={`Introduction scene ${activeFrame + 1} of ${frames.length}`}>
