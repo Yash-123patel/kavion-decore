@@ -12,8 +12,10 @@ const collections = [
   { title: 'Woolen items', category: '01 — soft textures', description: 'Warm, tactile pieces for slow living.', image: '/images/woolen-decor.png' },
   { title: 'Crochet items', category: '02 — handwoven', description: 'Delicate details with a handmade soul.', image: '/images/crochet-decor.png' },
   { title: 'Moulded clay items', category: '03 — earth made', description: 'Organic forms shaped one piece at a time.', image: '/images/clay-decor.png' },
-  { title: 'Mandala arts', category: '04 — mindful art', description: 'Pattern, color and balance for considered walls.', image: '/images/mandala-art.png' },
-]
+ { title: 'Mandala arts', category: '04 — mindful art', description: 'Pattern, color and balance for considered walls.', image: '/images/mandala-art.png' },
+ { title: 'Woven wall pieces', category: '05 — natural fibers', description: 'Hand-finished texture for calm, characterful walls.', image: '/images/real-decor-04.png' },
+ { title: 'Ceramic accents', category: '06 — earth made', description: 'Small objects that bring warmth to everyday corners.', image: '/images/real-decor-05.png' },
+  ]
 
 export default function Page() {
   const [menuOpen, setMenuOpen] = useState(false)
@@ -44,7 +46,7 @@ export default function Page() {
 
       <section className="intro shell" id="story"><p className="eyebrow">The Kevion point of view</p><div className="intro-grid"><h2>We believe a home should be <em>felt</em> before it is seen.</h2><div><p>From calm, considered rooms to the objects that make them yours, we create interiors with a quiet confidence and a love for the details.</p><a className="text-link" href={whatsappUrl} target="_blank" rel="noreferrer">Tell us about your space <ArrowUpRight size={16} /></a></div></div></section>
 
-      <section className="collection shell" id="collection"><div className="section-heading"><div><p className="eyebrow">Selected work</p><h2>Made for living.</h2></div><span className="section-count">04 / 04</span></div><div className="collection-grid">{collections.map((item) => <a className="collection-card" key={item.title} href={whatsappUrl} target="_blank" rel="noreferrer"><div className="image-wrap"><Image src={item.image} alt={item.title} fill sizes="(max-width: 768px) 100vw, 50vw" /></div><div className="card-meta"><div><span>{item.category}</span><h3>{item.title}</h3><p>{item.description}</p></div><ArrowUpRight size={20} /></div></a>)}</div></section>
+      <section className="collection shell" id="collection"><div className="section-heading"><div><p className="eyebrow">Selected work</p><h2>Made for living.</h2></div><span className="section-count">06 / 06</span></div><div className="collection-grid">{collections.map((item) => <a className="collection-card" key={item.title} href={whatsappUrl} target="_blank" rel="noreferrer"><div className="image-wrap"><Image src={item.image} alt={item.title} fill sizes="(max-width: 768px) 100vw, 50vw" /></div><div className="card-meta"><div><span>{item.category}</span><h3>{item.title}</h3><p>{item.description}</p></div><ArrowUpRight size={20} /></div></a>)}</div></section>
 
       <section className="cotton"><div className="shell cotton-grid"><div><p className="eyebrow">The handcrafted collection</p><h2>Made by hand,<br /><em>made to keep.</em></h2></div><div><p className="cotton-copy">From cozy woolen textures and intricate crochet to moulded clay and meditative mandala art, every piece brings warmth, character and a personal touch to your space.</p><a className="button button-light" href={whatsappUrl} target="_blank" rel="noreferrer">Enquire about the collection <ArrowUpRight size={16} /></a></div></div></section>
 

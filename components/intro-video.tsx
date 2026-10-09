@@ -8,6 +8,8 @@ const frames = [
   { image: '/images/real-interior-01.png', label: 'Natural light', title: 'A softer way to live.' },
   { image: '/images/real-interior-02.png', label: 'Thoughtful details', title: 'Made slowly. Felt deeply.' },
   { image: '/images/real-interior-03.png', label: 'Quiet comfort', title: 'A room with something to say.' },
+  { image: '/images/real-decor-04.png', label: 'Natural fibers', title: 'Texture that stays with you.' },
+  { image: '/images/real-decor-05.png', label: 'Small details', title: 'The beauty is in the finishing touch.' },
 ]
 
 export function IntroVideo() {
