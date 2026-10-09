@@ -29,14 +29,15 @@ h1, h2, h3, p { margin-top: 0; } h1, h2 { font-family: 'Cormorant Garamond', Geo
 .intro-video-header { display:flex; justify-content:space-between; align-items:end; gap:60px; margin-bottom:42px; }
 .intro-video-header h2 { margin:0; }
 .intro-video-lede { color:#5d6a60; font-size:14px; line-height:1.7; max-width:290px; margin:0 0 5px; }
-.intro-video-stage { position:relative; aspect-ratio:2 / 1; overflow:hidden; background:var(--sage); color:var(--cream); }
-.intro-video-frame { position:absolute; inset:0; opacity:0; transform:scale(1.04); transition:opacity 1s ease, transform 4.2s ease; }
-.intro-video-frame.active { opacity:1; transform:scale(1); }
-.intro-video-frame img { object-fit:cover; filter:saturate(.8); }
-.intro-video-overlay { position:absolute; inset:0; background:linear-gradient(90deg, rgba(29,42,36,.72), rgba(29,42,36,.08) 70%), linear-gradient(0deg, rgba(29,42,36,.58), transparent 45%); }
+.intro-video-stage { position:relative; aspect-ratio:2 / 1; overflow:hidden; background:var(--sage); color:var(--cream); isolation:isolate; }
+.intro-video-frame { position:absolute; inset:0; animation:intro-frame-in 1.1s cubic-bezier(.2,.7,.2,1) both; }
+.intro-video-frame img { object-fit:cover; filter:saturate(.88) contrast(.96); }
+.intro-video-overlay { position:absolute; inset:0; background:linear-gradient(90deg, rgba(29,42,36,.58), rgba(29,42,36,.04) 76%), linear-gradient(0deg, rgba(29,42,36,.42), transparent 48%); pointer-events:none; }
+@keyframes intro-frame-in { from { opacity:0; transform:scale(1.055); } to { opacity:1; transform:scale(1); } }
 .intro-video-brand { position:absolute; top:30px; right:34px; z-index:1; display:flex; align-items:center; justify-content:center; width:150px; min-height:64px; padding:8px 14px; background:rgba(246,245,240,.92); mix-blend-mode:screen; }
 .intro-video-brand img { width:100%; height:auto; object-fit:contain; }
-.intro-video-copy { position:absolute; left:46px; bottom:84px; max-width:500px; }
+.intro-video-copy { position:absolute; left:46px; bottom:84px; max-width:500px; animation:intro-copy-in .8s .18s cubic-bezier(.2,.7,.2,1) both; }
+@keyframes intro-copy-in { from { opacity:0; transform:translateY(14px); } to { opacity:1; transform:translateY(0); } }
 .intro-video-copy span { color:var(--gold); font-size:10px; letter-spacing:.18em; text-transform:uppercase; }
 .intro-video-copy h3 { font:400 clamp(38px, 5vw, 72px)/.92 'Cormorant Garamond', Georgia, serif; letter-spacing:-.04em; margin:12px 0 0; }
 .intro-video-controls { position:absolute; left:46px; right:46px; bottom:28px; display:flex; align-items:center; gap:12px; }
@@ -46,7 +47,7 @@ h1, h2, h3, p { margin-top: 0; } h1, h2 { font-family: 'Cormorant Garamond', Geo
 .intro-video-progress button { width:auto; height:2px; flex:1; border:0; border-radius:0; background:rgba(246,245,240,.45); }
 .intro-video-progress button.active { background:var(--cream); }
 .intro-video-time { color:rgba(246,245,240,.78); font-size:10px; letter-spacing:.12em; }
-@media (prefers-reduced-motion: reduce) { .intro-video-frame { transition:none; transform:none; } }
+@media (prefers-reduced-motion: reduce) { .intro-video-frame, .intro-video-copy { animation:none; } }
 .intro { padding: 150px 0 160px; } .intro-grid { display: grid; grid-template-columns: 1.3fr .7fr; gap: 100px; align-items: end; } .intro h2 { max-width: 650px; margin: 0; } .intro-grid div { color: #5d6a60; font-size: 15px; line-height: 1.7; max-width: 320px; } .intro-grid .text-link { color: var(--ink); margin-top: 18px; }
 .collection { padding-bottom: 150px; } .section-heading { display:flex; justify-content:space-between; align-items:end; margin-bottom: 45px; } .section-heading h2 { margin: 0; } .section-count { color: var(--gold); font: italic 18px Georgia, serif; }.collection-grid { display:grid; grid-template-columns: repeat(2, 1fr); gap: 72px 28px; }.collection-card:nth-child(even) { margin-top: 105px; }.image-wrap { position: relative; aspect-ratio: 1.16; overflow: hidden; background: var(--sage); }.image-wrap img { object-fit: cover; transition: transform .6s ease; }.collection-card:hover .image-wrap img { transform: scale(1.04); }.card-meta { display:flex; justify-content:space-between; align-items:start; padding-top: 18px; }.card-meta span { color: var(--gold); font-size: 9px; letter-spacing: .16em; text-transform: uppercase; }.card-meta h3 { font: 400 28px 'Cormorant Garamond', Georgia, serif; margin: 7px 0 0; }.card-meta p { color: #68756b; font-size: 12px; line-height: 1.5; margin: 7px 0 0; max-width: 240px; }
 .cotton { padding: 120px 0; background: var(--ink); color: var(--cream); }.cotton-grid { display:grid; grid-template-columns: 1fr 1fr; align-items:end; gap: 80px; }.cotton h2 { margin: 0; }.cotton-copy { max-width: 360px; font-size: 15px; line-height: 1.75; color: #c0cbbd; margin-bottom: 28px; }

@@ -78,7 +78,7 @@ export function IntroVideo() {
       </div>
 
       <div className="intro-video-stage" aria-live="polite">
-        <div className="intro-video-frame active">
+        <div className="intro-video-frame active" key={frame.image}>
           <Image src={frame.image} alt="" fill sizes="(max-width: 700px) 100vw, 1180px" loading="lazy" quality={72} />
         </div>
         <div className="intro-video-overlay" />
