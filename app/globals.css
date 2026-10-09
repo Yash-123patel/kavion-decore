@@ -29,10 +29,10 @@ h1, h2, h3, p { margin-top: 0; } h1, h2 { font-family: 'Cormorant Garamond', Geo
 .intro-video-header { display:flex; justify-content:space-between; align-items:end; gap:60px; margin-bottom:42px; }
 .intro-video-header h2 { margin:0; }
 .intro-video-lede { color:#5d6a60; font-size:14px; line-height:1.7; max-width:290px; margin:0 0 5px; }
-.intro-video-stage { position:relative; aspect-ratio:2 / 1; overflow:hidden; background:var(--sage); color:var(--cream); isolation:isolate; }
+.intro-video-stage { position:relative; aspect-ratio:2 / 1; overflow:hidden; background:var(--ink); color:var(--cream); isolation:isolate; }
 .intro-video-frame { position:absolute; inset:0; animation:intro-frame-in 1.1s cubic-bezier(.2,.7,.2,1) both; }
 .intro-video-frame img { object-fit:cover; filter:saturate(.88) contrast(.96); }
-.intro-video-overlay { position:absolute; inset:0; background:linear-gradient(90deg, rgba(29,42,36,.58), rgba(29,42,36,.04) 76%), linear-gradient(0deg, rgba(29,42,36,.42), transparent 48%); pointer-events:none; }
+.intro-video-overlay { position:absolute; inset:0; background:linear-gradient(90deg, rgba(29,42,36,.48), rgba(29,42,36,.02) 78%), linear-gradient(0deg, rgba(29,42,36,.3), transparent 52%); pointer-events:none; }
 @keyframes intro-frame-in { from { opacity:0; transform:scale(1.055); } to { opacity:1; transform:scale(1); } }
 .intro-video-brand { position:absolute; top:30px; right:34px; z-index:1; display:flex; align-items:center; justify-content:center; width:150px; min-height:64px; padding:8px 14px; background:rgba(246,245,240,.92); mix-blend-mode:screen; }
 .intro-video-brand img { width:100%; height:auto; object-fit:contain; }

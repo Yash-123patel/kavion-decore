@@ -5,10 +5,9 @@ import { Pause, Play, Volume2, VolumeX } from 'lucide-react'
 import { useEffect, useRef, useState } from 'react'
 
 const frames = [
-  { image: '/images/woolen-decor.png', label: 'Soft textures', title: 'A softer way to live.' },
-  { image: '/images/crochet-decor.png', label: 'Handwoven details', title: 'Made slowly. Felt deeply.' },
-  { image: '/images/clay-decor.png', label: 'Earth made', title: 'Objects with quiet character.' },
-  { image: '/images/mandala-art.png', label: 'Artful detail', title: 'A room with something to say.' },
+  { image: '/images/real-interior-01.png', label: 'Natural light', title: 'A softer way to live.' },
+  { image: '/images/real-interior-02.png', label: 'Thoughtful details', title: 'Made slowly. Felt deeply.' },
+  { image: '/images/real-interior-03.png', label: 'Quiet comfort', title: 'A room with something to say.' },
 ]
 
 export function IntroVideo() {
